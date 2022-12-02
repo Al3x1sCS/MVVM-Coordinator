@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE042AF9293A55AB00DC00F4 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE042AF8293A55AB00DC00F4 /* ViewController2.swift */; };
 		CE0FEEE629395FBB0048C128 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0FEEE529395FBB0048C128 /* AppDelegate.swift */; };
 		CE0FEEE829395FBB0048C128 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0FEEE729395FBB0048C128 /* SceneDelegate.swift */; };
-		CE0FEEEA29395FBB0048C128 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0FEEE929395FBB0048C128 /* ViewController.swift */; };
 		CE0FEEEF29395FBD0048C128 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE0FEEEE29395FBD0048C128 /* Assets.xcassets */; };
 		CE0FEEF229395FBD0048C128 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0FEEF029395FBD0048C128 /* LaunchScreen.storyboard */; };
 		CE0FEEFD29395FBE0048C128 /* MeusGastosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0FEEFC29395FBE0048C128 /* MeusGastosTests.swift */; };
 		CE0FEF0729395FBE0048C128 /* MeusGastosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0FEF0629395FBE0048C128 /* MeusGastosUITests.swift */; };
 		CE0FEF0929395FBE0048C128 /* MeusGastosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0FEF0829395FBE0048C128 /* MeusGastosUITestsLaunchTests.swift */; };
 		CE95D744293A6FB1007842B8 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE95D743293A6FB1007842B8 /* Coordinator.swift */; };
+		CE95D746293A719E007842B8 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE95D745293A719E007842B8 /* LoginCoordinator.swift */; };
+		CE95D749293A73FD007842B8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE95D748293A73FD007842B8 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,11 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CE042AF8293A55AB00DC00F4 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		CE0FEEE229395FBB0048C128 /* MeusGastos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeusGastos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0FEEE529395FBB0048C128 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE0FEEE729395FBB0048C128 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE0FEEE929395FBB0048C128 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CE0FEEEE29395FBD0048C128 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE0FEEF129395FBD0048C128 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE0FEEF329395FBD0048C128 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +49,8 @@
 		CE0FEF0629395FBE0048C128 /* MeusGastosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeusGastosUITests.swift; sourceTree = "<group>"; };
 		CE0FEF0829395FBE0048C128 /* MeusGastosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeusGastosUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CE95D743293A6FB1007842B8 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		CE95D745293A719E007842B8 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		CE95D748293A73FD007842B8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				CE95D743293A6FB1007842B8 /* Coordinator.swift */,
+				CE95D745293A719E007842B8 /* LoginCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -98,6 +99,7 @@
 		CE042AFC293A6BF000DC00F4 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				CE95D747293A73EB007842B8 /* Login */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -128,8 +130,6 @@
 			children = (
 				CE0FEEE529395FBB0048C128 /* AppDelegate.swift */,
 				CE0FEEE729395FBB0048C128 /* SceneDelegate.swift */,
-				CE0FEEE929395FBB0048C128 /* ViewController.swift */,
-				CE042AF8293A55AB00DC00F4 /* ViewController2.swift */,
 				CE0FEEEE29395FBD0048C128 /* Assets.xcassets */,
 				CE0FEEF029395FBD0048C128 /* LaunchScreen.storyboard */,
 				CE0FEEF329395FBD0048C128 /* Info.plist */,
@@ -152,6 +152,14 @@
 				CE0FEF0829395FBE0048C128 /* MeusGastosUITestsLaunchTests.swift */,
 			);
 			path = MeusGastosUITests;
+			sourceTree = "<group>";
+		};
+		CE95D747293A73EB007842B8 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CE95D748293A73FD007842B8 /* LoginViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,10 +292,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE0FEEEA29395FBB0048C128 /* ViewController.swift in Sources */,
-				CE042AF9293A55AB00DC00F4 /* ViewController2.swift in Sources */,
+				CE95D746293A719E007842B8 /* LoginCoordinator.swift in Sources */,
 				CE95D744293A6FB1007842B8 /* Coordinator.swift in Sources */,
 				CE0FEEE629395FBB0048C128 /* AppDelegate.swift in Sources */,
+				CE95D749293A73FD007842B8 /* LoginViewController.swift in Sources */,
 				CE0FEEE829395FBB0048C128 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
