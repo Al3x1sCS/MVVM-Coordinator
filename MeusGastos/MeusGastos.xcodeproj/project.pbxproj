@@ -16,6 +16,7 @@
 		CE0FEEFD29395FBE0048C128 /* MeusGastosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0FEEFC29395FBE0048C128 /* MeusGastosTests.swift */; };
 		CE0FEF0729395FBE0048C128 /* MeusGastosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0FEF0629395FBE0048C128 /* MeusGastosUITests.swift */; };
 		CE0FEF0929395FBE0048C128 /* MeusGastosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0FEF0829395FBE0048C128 /* MeusGastosUITestsLaunchTests.swift */; };
+		CE95D744293A6FB1007842B8 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE95D743293A6FB1007842B8 /* Coordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		CE0FEF0229395FBE0048C128 /* MeusGastosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeusGastosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0FEF0629395FBE0048C128 /* MeusGastosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeusGastosUITests.swift; sourceTree = "<group>"; };
 		CE0FEF0829395FBE0048C128 /* MeusGastosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeusGastosUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CE95D743293A6FB1007842B8 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 		CE042AFB293A6BE800DC00F4 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				CE95D743293A6FB1007842B8 /* Coordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 			files = (
 				CE0FEEEA29395FBB0048C128 /* ViewController.swift in Sources */,
 				CE042AF9293A55AB00DC00F4 /* ViewController2.swift in Sources */,
+				CE95D744293A6FB1007842B8 /* Coordinator.swift in Sources */,
 				CE0FEEE629395FBB0048C128 /* AppDelegate.swift in Sources */,
 				CE0FEEE829395FBB0048C128 /* SceneDelegate.swift in Sources */,
 			);
