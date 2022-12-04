@@ -20,6 +20,8 @@
 		CEE61EFC293CBE3A007E34E5 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE61EFB293CBE3A007E34E5 /* LoginView.swift */; };
 		CEE61EFF293CD2DC007E34E5 /* ViewCodeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE61EFE293CD2DC007E34E5 /* ViewCodeProtocol.swift */; };
 		CEE61F01293CD321007E34E5 /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE61F00293CD321007E34E5 /* Constraints.swift */; };
+		CEE61F03293CF420007E34E5 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE61F02293CF420007E34E5 /* Theme.swift */; };
+		CEE61F05293D0C0E007E34E5 /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE61F04293D0C0E007E34E5 /* TextFieldExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		CEE61EFB293CBE3A007E34E5 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		CEE61EFE293CD2DC007E34E5 /* ViewCodeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodeProtocol.swift; sourceTree = "<group>"; };
 		CEE61F00293CD321007E34E5 /* Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
+		CEE61F02293CF420007E34E5 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		CEE61F04293D0C0E007E34E5 /* TextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +179,8 @@
 			children = (
 				CEE61EFE293CD2DC007E34E5 /* ViewCodeProtocol.swift */,
 				CEE61F00293CD321007E34E5 /* Constraints.swift */,
+				CEE61F02293CF420007E34E5 /* Theme.swift */,
+				CEE61F04293D0C0E007E34E5 /* TextFieldExtension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -309,8 +315,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEE61F03293CF420007E34E5 /* Theme.swift in Sources */,
 				CEE61EFC293CBE3A007E34E5 /* LoginView.swift in Sources */,
 				CE95D746293A719E007842B8 /* LoginCoordinator.swift in Sources */,
+				CEE61F05293D0C0E007E34E5 /* TextFieldExtension.swift in Sources */,
 				CE95D744293A6FB1007842B8 /* Coordinator.swift in Sources */,
 				CE0FEEE629395FBB0048C128 /* AppDelegate.swift in Sources */,
 				CEE61F01293CD321007E34E5 /* Constraints.swift in Sources */,

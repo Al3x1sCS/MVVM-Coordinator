@@ -11,14 +11,15 @@ import UIKit
 class LoginViewController: UIViewController {
     
     lazy var loginView: LoginView = {
-        let view = LoginView()
+        let view = MeusGastos.LoginView()
         view.backgroundColor = .black
         
         return view
     }()
     
     override func loadView() {
-        self.view = loginView
+        super.loadView()
+        view = loginView
     }
     
     override func viewDidLoad() {
