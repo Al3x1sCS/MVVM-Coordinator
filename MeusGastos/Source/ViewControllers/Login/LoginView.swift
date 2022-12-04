@@ -5,4 +5,8 @@
 //  Created by user on 04/12/22.
 //
 
-import Foundation
+import UIKit
+
+class LoginView: UIView {
+    
+}
