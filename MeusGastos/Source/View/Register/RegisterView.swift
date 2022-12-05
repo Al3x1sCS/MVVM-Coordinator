@@ -16,7 +16,7 @@ class RegisterView: UIView, ViewCodeProtocol {
     lazy var imageView = UIImageView()
     
     //MARK: Labels
-    lazy var titleLabel = LabelDefault(text: "Cadastro de usuário")
+    lazy var titleLabel = LabelDefault(text: "Cadastro")
     lazy var emailLabel = LabelDefault(text: "Email", font: UIFont(name: "Arial", size: 20) ?? UIFont.systemFont(ofSize: 20))
     lazy var password = LabelDefault(text: "Senha", font: UIFont(name: "Arial", size: 20) ?? UIFont.systemFont(ofSize: 20))
     
