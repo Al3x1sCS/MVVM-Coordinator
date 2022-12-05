@@ -39,10 +39,11 @@ class LoginView: UIView, ViewCodeProtocol {
         let tf = UITextField()
         tf.placeholder = "Informe seu e-mail"
         tf.backgroundColor = .black
+        tf.textColor = .white
         tf.layer.borderWidth = 1
         tf.layer.cornerRadius = 15
         tf.layer.borderColor = UIColor.white.cgColor
-        tf.setPlaceHolderColor()
+        tf.setPlaceHolderColor(UIColor.temaGray())
         tf.setLeftPaddingPoints(15)
         
         return tf
@@ -61,10 +62,11 @@ class LoginView: UIView, ViewCodeProtocol {
         let tf = UITextField()
         tf.placeholder = "Informe sua senha"
         tf.backgroundColor = .black
+        tf.textColor = .white
         tf.layer.borderWidth = 1
         tf.layer.cornerRadius = 15
         tf.layer.borderColor = UIColor.white.cgColor
-        tf.setPlaceHolderColor()
+        tf.setPlaceHolderColor(UIColor.temaGray())
         tf.setLeftPaddingPoints(15)
         
         return tf
