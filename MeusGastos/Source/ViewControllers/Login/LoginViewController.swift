@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: ViewControllerDefault {
     
     lazy var loginView: LoginView = {
         let view = MeusGastos.LoginView()
@@ -25,5 +25,12 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.afterHideKeyboard = {
+            print("teclado se escondeu")
+        }
+        
+        self.afterShowKeyboard = { heightKeyboard in
+            print("teclado apareceu e sua altura é: \(heightKeyboard)")
+        }
     }
 }
