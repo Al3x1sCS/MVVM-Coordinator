@@ -21,7 +21,7 @@ class LoginView: UIView, ViewCodeProtocol {
         let lb = UILabel()
         lb.text = "Login"
         lb.textColor = .white
-        lb.font = UIFont.systemFont(ofSize: 25, weight: .bold)
+        lb.font = UIFont(name: "Arial-Black", size: 25)
         
         return lb
     }()
@@ -41,7 +41,7 @@ class LoginView: UIView, ViewCodeProtocol {
         tf.backgroundColor = .black
         tf.textColor = .white
         tf.layer.borderWidth = 1
-        tf.layer.cornerRadius = 15
+        tf.layer.cornerRadius = 10
         tf.layer.borderColor = UIColor.white.cgColor
         tf.setPlaceHolderColor(UIColor.temaGray())
         tf.setLeftPaddingPoints(15)
@@ -64,7 +64,7 @@ class LoginView: UIView, ViewCodeProtocol {
         tf.backgroundColor = .black
         tf.textColor = .white
         tf.layer.borderWidth = 1
-        tf.layer.cornerRadius = 15
+        tf.layer.cornerRadius = 10
         tf.layer.borderColor = UIColor.white.cgColor
         tf.setPlaceHolderColor(UIColor.temaGray())
         tf.setLeftPaddingPoints(15)
@@ -78,9 +78,26 @@ class LoginView: UIView, ViewCodeProtocol {
         config.baseBackgroundColor = .buttons()
         config.cornerStyle = .capsule
         bt.configuration = config
-        bt.layer.cornerRadius = 20
         
         let attributedText = NSMutableAttributedString(string: "ENTRAR", attributes: [
+            NSAttributedString.Key.font: UIFont(name: "Arial", size: 24) as Any,
+            NSAttributedString.Key.foregroundColor: UIColor.white,
+            NSAttributedString.Key.kern: 1
+        ])
+        
+        bt.setAttributedTitle(attributedText, for: .normal)
+        
+        return bt
+    }()
+    
+    lazy var buttonRegister: UIButton = {
+        let bt = UIButton()
+        var config = UIButton.Configuration.filled()
+        config.baseBackgroundColor = .buttons()
+        config.cornerStyle = .capsule
+        bt.configuration = config
+        
+        let attributedText = NSMutableAttributedString(string: "REGISTRAR", attributes: [
             NSAttributedString.Key.font: UIFont(name: "Arial", size: 24) as Any,
             NSAttributedString.Key.foregroundColor: UIColor.white,
             NSAttributedString.Key.kern: 1
@@ -110,6 +127,7 @@ class LoginView: UIView, ViewCodeProtocol {
         addSubview(password)
         addSubview(passwordTextField)
         addSubview(buttonLogin)
+        addSubview(buttonRegister)
     }
     
     func setupConstraints() {
@@ -197,9 +215,22 @@ class LoginView: UIView, ViewCodeProtocol {
             bottom: nil,
             right: self.rightAnchor,
             paddingTop: 30,
-            paddingLeft: 120,
+            paddingLeft: 30,
             paddingBottom: 0,
-            paddingRight: 120,
+            paddingRight: 30,
+            width: 0,
+            height: 40
+        )
+        
+        buttonRegister.anchor (
+            top: buttonLogin.bottomAnchor,
+            left: buttonLogin.leftAnchor,
+            bottom: nil,
+            right: buttonLogin.rightAnchor,
+            paddingTop: 30,
+            paddingLeft: 0,
+            paddingBottom: 0,
+            paddingRight: 0,
             width: 0,
             height: 40
         )
