@@ -9,77 +9,21 @@ import UIKit
 
 class LoginView: UIView, ViewCodeProtocol {
     
+    //MARK: Image
     lazy var imageView = UIImageView()
     
+    //MARK: Labels
     lazy var titleLabel = LabelDefault(text: "Login")
-    
     lazy var emailLabel = LabelDefault(text: "Email", font: UIFont(name: "Arial", size: 20) ?? UIFont.systemFont(ofSize: 20))
-    
-    lazy var emailTextField: UITextField = {
-        let tf = UITextField()
-        tf.placeholder = "Informe seu e-mail"
-        tf.backgroundColor = .black
-        tf.textColor = .white
-        tf.layer.borderWidth = 1
-        tf.layer.cornerRadius = 10
-        tf.layer.borderColor = UIColor.temaGray().cgColor
-        tf.setPlaceHolderColor(UIColor.temaGray())
-        tf.setLeftPaddingPoints(15)
-        
-        return tf
-    }()
-    
     lazy var password = LabelDefault(text: "Senha", font: UIFont(name: "Arial", size: 20) ?? UIFont.systemFont(ofSize: 20))
     
-    lazy var passwordTextField: UITextField = {
-        let tf = UITextField()
-        tf.placeholder = "Informe sua senha"
-        tf.backgroundColor = .black
-        tf.textColor = .white
-        tf.layer.borderWidth = 1
-        tf.layer.cornerRadius = 10
-        tf.layer.borderColor = UIColor.temaGray().cgColor
-        tf.setPlaceHolderColor(UIColor.temaGray())
-        tf.setLeftPaddingPoints(15)
-        
-        return tf
-    }()
+    //MARK: Text Fields
+    lazy var emailTextField = TextFieldDefault(placeholder: "Informe seu e-mail", keyboardType: .emailAddress)
+    lazy var passwordTextField = TextFieldDefault(placeholder: "Informe sua senha", keyboardType: .default)
     
-    lazy var buttonLogin: UIButton = {
-        let bt = UIButton()
-        var config = UIButton.Configuration.filled()
-        config.baseBackgroundColor = .buttons()
-        config.cornerStyle = .capsule
-        bt.configuration = config
-        
-        let attributedText = NSMutableAttributedString(string: "Entrar", attributes: [
-            NSAttributedString.Key.font: UIFont(name: "Arial", size: 24) as Any,
-            NSAttributedString.Key.foregroundColor: UIColor.white,
-            NSAttributedString.Key.kern: 1
-        ])
-        
-        bt.setAttributedTitle(attributedText, for: .normal)
-        
-        return bt
-    }()
-    
-    lazy var buttonRegister: UIButton = {
-        let bt = UIButton()
-        var config = UIButton.Configuration.filled()
-        config.baseBackgroundColor = .buttons()
-        config.cornerStyle = .capsule
-        bt.configuration = config
-        
-        let attributedText = NSMutableAttributedString(string: "Registrar", attributes: [
-            NSAttributedString.Key.font: UIFont(name: "Arial", size: 24) as Any,
-            NSAttributedString.Key.foregroundColor: UIColor.white,
-            NSAttributedString.Key.kern: 1
-        ])
-        
-        bt.setAttributedTitle(attributedText, for: .normal)
-        
-        return bt
-    }()
+    //MARK: Buttons
+    lazy var buttonLogin = ButtonDefault(title: "Entrar", color: .BRQBlue())
+    lazy var buttonRegister = ButtonDefault(title: "Registrar", color: .BRQOrange())
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -213,7 +157,9 @@ class LoginView: UIView, ViewCodeProtocol {
     func addictionalConfiguration() {
         imageView.image = UIImage(named: "BRQ_Investimentos_Logo")
         imageView.contentMode = .scaleAspectFit
+        buttonLogin.setBackgroundColor(UIColor.BRQBlue().withAlphaComponent(0.5), for: .disabled)
+        buttonRegister.setBackgroundColor(UIColor.BRQOrange().withAlphaComponent(0.5), for: .disabled)
     }
-    
+
     
 }
