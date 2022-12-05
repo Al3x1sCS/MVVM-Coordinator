@@ -9,31 +9,11 @@ import UIKit
 
 class LoginView: UIView, ViewCodeProtocol {
     
-    lazy var imageView: UIImageView = {
-        let iv = UIImageView()
-        iv.image = UIImage(named: "BRQ_Investimentos_Logo")
-        iv.contentMode = .scaleAspectFit
-        
-        return iv
-    }()
+    lazy var imageView = UIImageView()
     
-    lazy var titleLabel: UILabel = {
-        let lb = UILabel()
-        lb.text = "Login"
-        lb.textColor = .white
-        lb.font = UIFont(name: "Arial-Black", size: 25)
-        
-        return lb
-    }()
+    lazy var titleLabel = LabelDefault(text: "Login")
     
-    lazy var emailLabel: UILabel = {
-        let lb = UILabel()
-        lb.text = "Email"
-        lb.textColor = .white
-        lb.font = UIFont(name: "Arial", size: 20)
-        
-        return lb
-    }()
+    lazy var emailLabel = LabelDefault(text: "Email", font: UIFont(name: "Arial", size: 20) ?? UIFont.systemFont(ofSize: 20))
     
     lazy var emailTextField: UITextField = {
         let tf = UITextField()
@@ -42,21 +22,14 @@ class LoginView: UIView, ViewCodeProtocol {
         tf.textColor = .white
         tf.layer.borderWidth = 1
         tf.layer.cornerRadius = 10
-        tf.layer.borderColor = UIColor.white.cgColor
+        tf.layer.borderColor = UIColor.temaGray().cgColor
         tf.setPlaceHolderColor(UIColor.temaGray())
         tf.setLeftPaddingPoints(15)
         
         return tf
     }()
     
-    lazy var password: UILabel = {
-       let lb = UILabel()
-        lb.text = "Senha"
-        lb.textColor = .white
-        lb.font = UIFont(name: "Arial", size: 20)
-        
-        return lb
-    }()
+    lazy var password = LabelDefault(text: "Senha", font: UIFont(name: "Arial", size: 20) ?? UIFont.systemFont(ofSize: 20))
     
     lazy var passwordTextField: UITextField = {
         let tf = UITextField()
@@ -65,7 +38,7 @@ class LoginView: UIView, ViewCodeProtocol {
         tf.textColor = .white
         tf.layer.borderWidth = 1
         tf.layer.cornerRadius = 10
-        tf.layer.borderColor = UIColor.white.cgColor
+        tf.layer.borderColor = UIColor.temaGray().cgColor
         tf.setPlaceHolderColor(UIColor.temaGray())
         tf.setLeftPaddingPoints(15)
         
@@ -79,7 +52,7 @@ class LoginView: UIView, ViewCodeProtocol {
         config.cornerStyle = .capsule
         bt.configuration = config
         
-        let attributedText = NSMutableAttributedString(string: "ENTRAR", attributes: [
+        let attributedText = NSMutableAttributedString(string: "Entrar", attributes: [
             NSAttributedString.Key.font: UIFont(name: "Arial", size: 24) as Any,
             NSAttributedString.Key.foregroundColor: UIColor.white,
             NSAttributedString.Key.kern: 1
@@ -97,7 +70,7 @@ class LoginView: UIView, ViewCodeProtocol {
         config.cornerStyle = .capsule
         bt.configuration = config
         
-        let attributedText = NSMutableAttributedString(string: "REGISTRAR", attributes: [
+        let attributedText = NSMutableAttributedString(string: "Registrar", attributes: [
             NSAttributedString.Key.font: UIFont(name: "Arial", size: 24) as Any,
             NSAttributedString.Key.foregroundColor: UIColor.white,
             NSAttributedString.Key.kern: 1
@@ -215,11 +188,11 @@ class LoginView: UIView, ViewCodeProtocol {
             bottom: nil,
             right: self.rightAnchor,
             paddingTop: 30,
-            paddingLeft: 30,
+            paddingLeft: 24,
             paddingBottom: 0,
-            paddingRight: 30,
+            paddingRight: 24,
             width: 0,
-            height: 40
+            height: 43
         )
         
         buttonRegister.anchor (
@@ -232,12 +205,14 @@ class LoginView: UIView, ViewCodeProtocol {
             paddingBottom: 0,
             paddingRight: 0,
             width: 0,
-            height: 40
+            height: 43
         )
         
     }
     
     func addictionalConfiguration() {
+        imageView.image = UIImage(named: "BRQ_Investimentos_Logo")
+        imageView.contentMode = .scaleAspectFit
     }
     
     

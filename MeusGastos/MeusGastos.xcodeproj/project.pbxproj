@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE0B2900293E1DC800791301 /* Arial Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE0B28FF293E1DC800791301 /* Arial Black.ttf */; };
+		CE0B2904293E200600791301 /* LabelDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B2903293E200600791301 /* LabelDefault.swift */; };
 		CE0FEEE629395FBB0048C128 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0FEEE529395FBB0048C128 /* AppDelegate.swift */; };
 		CE0FEEE829395FBB0048C128 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0FEEE729395FBB0048C128 /* SceneDelegate.swift */; };
 		CE0FEEEF29395FBD0048C128 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE0FEEEE29395FBD0048C128 /* Assets.xcassets */; };
@@ -42,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE0B28FF293E1DC800791301 /* Arial Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arial Black.ttf"; sourceTree = "<group>"; };
+		CE0B2903293E200600791301 /* LabelDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelDefault.swift; sourceTree = "<group>"; };
 		CE0FEEE229395FBB0048C128 /* MeusGastos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeusGastos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0FEEE529395FBB0048C128 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE0FEEE729395FBB0048C128 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,8 +96,11 @@
 			isa = PBXGroup;
 			children = (
 				CE042AFB293A6BE800DC00F4 /* Coordinator */,
-				CEE61EFD293CD2B5007E34E5 /* Utils */,
+				CE0B2901293E1FDE00791301 /* Infrastructure */,
+				CE0B2905293E203C00791301 /* Model */,
+				CE0B2906293E204D00791301 /* View */,
 				CE042AFC293A6BF000DC00F4 /* ViewControllers */,
+				CE0B2907293E205500791301 /* ViewModel */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -113,6 +120,62 @@
 				CE95D747293A73EB007842B8 /* Login */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CE0B28FE293E1D9300791301 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CE0B28FF293E1DC800791301 /* Arial Black.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		CE0B2901293E1FDE00791301 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				CE0B2902293E1FF200791301 /* Components */,
+				CE0B28FE293E1D9300791301 /* Fonts */,
+				CEE61EFD293CD2B5007E34E5 /* Utils */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		CE0B2902293E1FF200791301 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				CE0B2903293E200600791301 /* LabelDefault.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		CE0B2905293E203C00791301 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE0B2906293E204D00791301 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE0B2908293E20D200791301 /* Login */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE0B2907293E205500791301 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CE0B2908293E20D200791301 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CEE61EFB293CBE3A007E34E5 /* LoginView.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		CE0FEED929395FBB0048C128 = {
@@ -169,7 +232,6 @@
 			isa = PBXGroup;
 			children = (
 				CE95D748293A73FD007842B8 /* LoginViewController.swift */,
-				CEE61EFB293CBE3A007E34E5 /* LoginView.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -291,6 +353,7 @@
 			files = (
 				CE0FEEF229395FBD0048C128 /* LaunchScreen.storyboard in Resources */,
 				CE0FEEEF29395FBD0048C128 /* Assets.xcassets in Resources */,
+				CE0B2900293E1DC800791301 /* Arial Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +383,7 @@
 				CE95D746293A719E007842B8 /* LoginCoordinator.swift in Sources */,
 				CEE61F05293D0C0E007E34E5 /* TextFieldExtension.swift in Sources */,
 				CE95D744293A6FB1007842B8 /* Coordinator.swift in Sources */,
+				CE0B2904293E200600791301 /* LabelDefault.swift in Sources */,
 				CE0FEEE629395FBB0048C128 /* AppDelegate.swift in Sources */,
 				CEE61F01293CD321007E34E5 /* Constraints.swift in Sources */,
 				CEE61EFF293CD2DC007E34E5 /* ViewCodeProtocol.swift in Sources */,
