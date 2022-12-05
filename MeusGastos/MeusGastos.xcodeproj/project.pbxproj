@@ -12,6 +12,9 @@
 		CE0B290A293E2A2200791301 /* TextFieldDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B2909293E2A2200791301 /* TextFieldDefault.swift */; };
 		CE0B290C293E2C6500791301 /* ButtonDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B290B293E2C6500791301 /* ButtonDefault.swift */; };
 		CE0B2910293E3B0000791301 /* ViewControllerDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B290F293E3B0000791301 /* ViewControllerDefault.swift */; };
+		CE0B2912293E55A600791301 /* RegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B2911293E55A600791301 /* RegisterCoordinator.swift */; };
+		CE0B2915293E562E00791301 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B2914293E562E00791301 /* RegisterViewController.swift */; };
+		CE0B2918293E566F00791301 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B2917293E566F00791301 /* RegisterView.swift */; };
 		CE0FEEE629395FBB0048C128 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0FEEE529395FBB0048C128 /* AppDelegate.swift */; };
 		CE0FEEE829395FBB0048C128 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0FEEE729395FBB0048C128 /* SceneDelegate.swift */; };
 		CE0FEEEF29395FBD0048C128 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE0FEEEE29395FBD0048C128 /* Assets.xcassets */; };
@@ -52,6 +55,9 @@
 		CE0B2909293E2A2200791301 /* TextFieldDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDefault.swift; sourceTree = "<group>"; };
 		CE0B290B293E2C6500791301 /* ButtonDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonDefault.swift; sourceTree = "<group>"; };
 		CE0B290F293E3B0000791301 /* ViewControllerDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDefault.swift; sourceTree = "<group>"; };
+		CE0B2911293E55A600791301 /* RegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinator.swift; sourceTree = "<group>"; };
+		CE0B2914293E562E00791301 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		CE0B2917293E566F00791301 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		CE0FEEE229395FBB0048C128 /* MeusGastos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeusGastos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0FEEE529395FBB0048C128 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE0FEEE729395FBB0048C128 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +122,7 @@
 			children = (
 				CE95D743293A6FB1007842B8 /* Coordinator.swift */,
 				CE95D745293A719E007842B8 /* LoginCoordinator.swift */,
+				CE0B2911293E55A600791301 /* RegisterCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -125,6 +132,7 @@
 			children = (
 				CE0B290E293E3AE400791301 /* Base */,
 				CE95D747293A73EB007842B8 /* Login */,
+				CE0B2913293E561100791301 /* Register */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -169,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				CE0B2908293E20D200791301 /* Login */,
+				CE0B2916293E565C00791301 /* Register */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -202,6 +211,22 @@
 				CE0B290F293E3B0000791301 /* ViewControllerDefault.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		CE0B2913293E561100791301 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				CE0B2914293E562E00791301 /* RegisterViewController.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		CE0B2916293E565C00791301 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				CE0B2917293E566F00791301 /* RegisterView.swift */,
+			);
+			path = Register;
 			sourceTree = "<group>";
 		};
 		CE0FEED929395FBB0048C128 = {
@@ -411,12 +436,15 @@
 				CE0B2904293E200600791301 /* LabelDefault.swift in Sources */,
 				CE0FEEE629395FBB0048C128 /* AppDelegate.swift in Sources */,
 				CEE61F01293CD321007E34E5 /* Constraints.swift in Sources */,
+				CE0B2918293E566F00791301 /* RegisterView.swift in Sources */,
 				CEE61EFF293CD2DC007E34E5 /* ViewCodeProtocol.swift in Sources */,
 				CE95D749293A73FD007842B8 /* LoginViewController.swift in Sources */,
 				CE0B290C293E2C6500791301 /* ButtonDefault.swift in Sources */,
+				CE0B2915293E562E00791301 /* RegisterViewController.swift in Sources */,
 				CE0FEEE829395FBB0048C128 /* SceneDelegate.swift in Sources */,
 				CE0B2910293E3B0000791301 /* ViewControllerDefault.swift in Sources */,
 				CE0B290A293E2A2200791301 /* TextFieldDefault.swift in Sources */,
+				CE0B2912293E55A600791301 /* RegisterCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
