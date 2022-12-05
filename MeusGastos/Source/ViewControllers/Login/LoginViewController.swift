@@ -9,17 +9,22 @@ import Foundation
 import UIKit
 
 class LoginViewController: ViewControllerDefault {
+    var onRegisterTap: (() -> Void)?
     
     lazy var loginView: LoginView = {
         let view = MeusGastos.LoginView()
         view.backgroundColor = .black
+        
+        view.onRegisterTap = {
+            self.onRegisterTap?()
+        }
         
         return view
     }()
     
     override func loadView() {
         super.loadView()
-        view = loginView
+        self.view = loginView
     }
     
     override func viewDidLoad() {
