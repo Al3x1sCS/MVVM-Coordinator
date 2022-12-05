@@ -26,7 +26,7 @@ class RegisterView: UIView, ViewCodeProtocol {
     
     //MARK: Buttons
     lazy var buttonRegister = ButtonDefault(title: "Registrar usuário", color: .BRQOrange())
-    lazy var buttonLogin = ButtonDefault(title: "Entrar", color: .BRQBlue())
+    lazy var buttonLogin = ButtonDefault(title: "Voltar ao Login", color: .BRQBlue())
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -158,12 +158,14 @@ class RegisterView: UIView, ViewCodeProtocol {
     }
     
     func addictionalConfiguration() {
+        //TODO: Verificar se não faz parte da responsabilidade da viewmodel
         imageView.image = UIImage(named: "BRQ_Investimentos_Logo")
         imageView.contentMode = .scaleAspectFit
         
         buttonLogin.setBackgroundColor(UIColor.BRQBlue().withAlphaComponent(0.5), for: .disabled)
         buttonRegister.setBackgroundColor(UIColor.BRQOrange().withAlphaComponent(0.5), for: .disabled)
         
+        //TODO: A responsabilidade da view é compor, não adicionar logica ao componente. Verificar se não faz parte da responsabilidade da viewmodel
         buttonLogin.addTarget(self, action: #selector(buttonLoginTap), for: .touchUpInside)
     }
     
