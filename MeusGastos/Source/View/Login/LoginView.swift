@@ -19,7 +19,7 @@ class LoginView: UIView, ViewCodeProtocol {
     
     //MARK: Text Fields
     lazy var emailTextField = TextFieldDefault(placeholder: "Informe seu e-mail", keyboardType: .emailAddress)
-    lazy var passwordTextField = TextFieldDefault(placeholder: "Informe sua senha", keyboardType: .default)
+    lazy var passwordTextField = TextFieldDefault(placeholder: "Informe sua senha", isSecureTextEntry: true)
     
     //MARK: Buttons
     lazy var buttonLogin = ButtonDefault(title: "Entrar", color: .BRQBlue())

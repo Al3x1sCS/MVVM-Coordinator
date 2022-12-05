@@ -12,19 +12,24 @@ import UIKit
 class TextFieldDefault: UITextField {
     init(placeholder: String, keyboardType: UIKeyboardType) {
         super.init(frame: .zero)
-        
-        initDefault(placeholder: placeholder, keyboardType: keyboardType)
+        initDefault(placeholder: placeholder)
+        self.keyboardType = keyboardType
+    }
+    
+    init(placeholder: String, isSecureTextEntry: Bool) {
+        super.init(frame: .zero)
+        initDefault(placeholder: placeholder)
+        self.isSecureTextEntry = isSecureTextEntry
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func initDefault(placeholder: String, keyboardType: UIKeyboardType) {
+    private func initDefault(placeholder: String) {
         self.backgroundColor = .black
         self.textColor = .white
         self.placeholder = placeholder
-        self.keyboardType = keyboardType
         self.layer.cornerRadius = 10
         self.layer.borderWidth = 1
         self.layer.borderColor = UIColor.temaGray().cgColor
