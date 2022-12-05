@@ -8,6 +8,7 @@
 import UIKit
 
 class LoginView: UIView, ViewCodeProtocol {
+    var onRegisterTap: (() -> Void)?
     
     //MARK: Image
     lazy var imageView = UIImageView()
@@ -157,9 +158,15 @@ class LoginView: UIView, ViewCodeProtocol {
     func addictionalConfiguration() {
         imageView.image = UIImage(named: "BRQ_Investimentos_Logo")
         imageView.contentMode = .scaleAspectFit
+        
         buttonLogin.setBackgroundColor(UIColor.BRQBlue().withAlphaComponent(0.5), for: .disabled)
         buttonRegister.setBackgroundColor(UIColor.BRQOrange().withAlphaComponent(0.5), for: .disabled)
+        
+        buttonRegister.addTarget(self, action: #selector(buttonRegisterTap), for: .touchUpInside)
     }
-
+    
+    @objc func buttonRegisterTap() {
+        self.onRegisterTap?()
+    }
     
 }
