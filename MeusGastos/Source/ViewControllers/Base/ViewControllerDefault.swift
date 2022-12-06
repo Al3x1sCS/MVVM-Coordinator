@@ -18,6 +18,25 @@ class ViewControllerDefault: UIViewController {
         setupKeyboard()
     }
     
+    // MARK: Setup Navigation
+    func setupNavigation(with title: String) {
+        navigationItem.title = title
+        
+        navigationController?.navigationBar.titleTextAttributes = [
+            NSAttributedString.Key.foregroundColor:UIColor.white,
+            NSAttributedString.Key.font: UIFont(name: "Helvetica", size: 17)!
+        ]
+        
+        navigationController?.navigationBar.tintColor = .white
+    }
+    
+    // MARK: StatusBar Style
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        
+        return UIStatusBarStyle.lightContent
+    }
+
+    //MARK: Setup Keyboard
     fileprivate func setupKeyboard() {
         let _: NSObjectProtocol = NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: nil) { (notification) in
             guard let value = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
