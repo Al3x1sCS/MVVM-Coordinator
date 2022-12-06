@@ -10,14 +10,14 @@ import UIKit
 
 class LoginViewController: ViewControllerDefault {
     var onRegisterTap: (() -> Void)?
+    var onLoginTap: (() -> Void)?
     
-    lazy var loginView: LoginView = {
+    private lazy var loginView: LoginView = {
         let view = MeusGastos.LoginView()
         view.backgroundColor = .black
         
-        view.onRegisterTap = {
-            self.onRegisterTap?()
-        }
+        view.onRegisterTap = { self.onRegisterTap?() }
+        view.onLoginTap = { self.onLoginTap?() }
         
         return view
     }()

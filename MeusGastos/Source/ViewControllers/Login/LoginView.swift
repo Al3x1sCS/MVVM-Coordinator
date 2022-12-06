@@ -8,7 +8,11 @@
 import UIKit
 
 class LoginView: UIView, ViewCodeProtocol {
+    //MARK: - Clousures
     var onRegisterTap: (() -> Void)?
+    var onLoginTap: (() -> Void)?
+    
+    //MARK: - Visual Elements
     
     //MARK: Image
     lazy var imageView = UIImageView()
@@ -26,6 +30,7 @@ class LoginView: UIView, ViewCodeProtocol {
     lazy var buttonLogin = ButtonDefault(title: "Entrar", color: .BRQBlue())
     lazy var buttonRegister = ButtonDefault(title: "Registrar", color: .BRQOrange())
     
+    //MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -36,7 +41,7 @@ class LoginView: UIView, ViewCodeProtocol {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
+    //MARK: - View Hierachy
     func buildViewHierachy() {
         addSubview(imageView)
         addSubview(titleLabel)
@@ -48,18 +53,19 @@ class LoginView: UIView, ViewCodeProtocol {
         addSubview(buttonRegister)
     }
     
+    //MARK: - Constraints
     func setupConstraints() {
         imageView.anchor (
             top: self.topAnchor,
             left: safeAreaLayoutGuide.leftAnchor,
             bottom: nil,
             right: safeAreaLayoutGuide.rightAnchor,
-            paddingTop: 24,
+            paddingTop: 16,
             paddingLeft: 0,
             paddingBottom: 0,
             paddingRight: 0,
             width: 0,
-            height: 175
+            height: 0
         )
         
         titleLabel.anchor (
@@ -72,7 +78,7 @@ class LoginView: UIView, ViewCodeProtocol {
             paddingBottom: 0,
             paddingRight: 24,
             width: 0,
-            height: 0
+            height: 43
         )
         
         emailLabel.anchor (
@@ -80,12 +86,12 @@ class LoginView: UIView, ViewCodeProtocol {
             left: titleLabel.leftAnchor,
             bottom: nil,
             right: titleLabel.rightAnchor,
-            paddingTop: 30,
+            paddingTop: 12,
             paddingLeft: 0,
             paddingBottom: 0,
             paddingRight: 0,
             width: 0,
-            height: 0
+            height: 43
         )
         
         emailTextField.anchor (
@@ -106,12 +112,12 @@ class LoginView: UIView, ViewCodeProtocol {
             left: emailLabel.leftAnchor,
             bottom: nil,
             right: emailLabel.rightAnchor,
-            paddingTop: 30,
+            paddingTop: 12,
             paddingLeft: 0,
             paddingBottom: 0,
             paddingRight: 0,
             width: 0,
-            height: 0
+            height: 43
         )
         
         passwordTextField.anchor (
@@ -132,7 +138,7 @@ class LoginView: UIView, ViewCodeProtocol {
             left: self.leftAnchor,
             bottom: nil,
             right: self.rightAnchor,
-            paddingTop: 30,
+            paddingTop: 24,
             paddingLeft: 24,
             paddingBottom: 0,
             paddingRight: 24,
@@ -143,11 +149,11 @@ class LoginView: UIView, ViewCodeProtocol {
         buttonRegister.anchor (
             top: buttonLogin.bottomAnchor,
             left: buttonLogin.leftAnchor,
-            bottom: nil,
+            bottom: safeAreaLayoutGuide.bottomAnchor,
             right: buttonLogin.rightAnchor,
-            paddingTop: 30,
+            paddingTop: 24,
             paddingLeft: 0,
-            paddingBottom: 0,
+            paddingBottom: 70,
             paddingRight: 0,
             width: 0,
             height: 43
@@ -155,6 +161,7 @@ class LoginView: UIView, ViewCodeProtocol {
         
     }
     
+    //MARK: - Configuration
     func addictionalConfiguration() {
         imageView.image = UIImage(named: "BRQ_Investimentos_Logo")
         imageView.contentMode = .scaleAspectFit
@@ -162,11 +169,18 @@ class LoginView: UIView, ViewCodeProtocol {
         buttonLogin.setBackgroundColor(UIColor.BRQBlue().withAlphaComponent(0.5), for: .disabled)
         buttonRegister.setBackgroundColor(UIColor.BRQOrange().withAlphaComponent(0.5), for: .disabled)
         
+        //TODO: A responsabilidade da view é compor, não adicionar logica ao componente. Verificar se não faz parte da responsabilidade da viewmodel
         buttonRegister.addTarget(self, action: #selector(buttonRegisterTap), for: .touchUpInside)
+        buttonLogin.addTarget(self, action: #selector(buttonLoginTap), for: .touchUpInside)
     }
     
+    //TODO: A responsabilidade da view é compor, não adicionar logica ao componente. Verificar se não faz parte da responsabilidade da viewmodel
     @objc func buttonRegisterTap() {
         self.onRegisterTap?()
+    }
+    
+    @objc func buttonLoginTap() {
+        self.onLoginTap?()
     }
     
 }

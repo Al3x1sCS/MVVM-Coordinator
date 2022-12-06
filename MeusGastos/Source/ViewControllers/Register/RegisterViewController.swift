@@ -13,20 +13,18 @@ class RegisterViewController: ViewControllerDefault {
     var onLoginTap: (() -> Void)?
     
     //MARK: Visual Elements
-    lazy var registerView: RegisterView = {
+    private lazy var registerView: RegisterView = {
         let view = MeusGastos.RegisterView()
         view.backgroundColor = .black
         
-        view.onLoginTap = {
-            self.onLoginTap?()
-        }
+        view.onLoginTap = { self.onLoginTap?() }
         
         return view
     }()
     
     override func loadView() {
         super.loadView()
-        view = registerView
+        self.view = registerView
     }
     
     override func viewWillAppear(_ animated: Bool) {
