@@ -21,8 +21,16 @@ extension UIColor {
         return UIColor.rgb(red: 208, green: 2, blue: 27)
     }
     
-    static func temaGray() -> UIColor {
+    static func BRQGray() -> UIColor {
         return UIColor.rgb(red: 151, green: 151, blue: 151)
+    }
+    
+    static func BRQGray2() -> UIColor {
+        return UIColor.rgb(red: 34, green: 34, blue: 34)
+    }
+    
+    static func BRQGray3() -> UIColor {
+        return UIColor.rgb(red: 4, green: 4, blue: 4)
     }
     
     static func BRQBlue() -> UIColor {

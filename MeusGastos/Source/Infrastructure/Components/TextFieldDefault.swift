@@ -32,8 +32,8 @@ class TextFieldDefault: UITextField {
         self.placeholder = placeholder
         self.layer.cornerRadius = 10
         self.layer.borderWidth = 1
-        self.layer.borderColor = UIColor.temaGray().cgColor
-        self.setPlaceHolderColor(UIColor.temaGray())
+        self.layer.borderColor = UIColor.BRQGray().cgColor
+        self.setPlaceHolderColor(UIColor.BRQGray())
         self.setLeftPaddingPoints(10)
     }
 }
