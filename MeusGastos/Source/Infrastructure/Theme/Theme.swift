@@ -13,6 +13,14 @@ extension UIColor {
         return UIColor(red: red/255, green: green/255, blue: blue/255, alpha: 1)
     }
     
+    static func viewBlue() -> UIColor {
+        return UIColor.rgb(red: 5, green: 0, blue: 20)
+    }
+    
+    static func viewOrange() -> UIColor {
+        return UIColor.rgb(red: 20, green: 10, blue: 0)
+    }
+    
     static func variationGreen() -> UIColor {
         return UIColor.rgb(red: 126, green: 211, blue: 33)
     }
