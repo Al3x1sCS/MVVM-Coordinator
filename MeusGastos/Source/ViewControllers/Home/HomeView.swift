@@ -16,33 +16,31 @@ class HomeView: UIView, ViewCodeProtocol {
     
     //MARK: - Visual Elements
     lazy var segmentedControl: UISegmentedControl = {
-        let sc = UISegmentedControl(items: ["Em Alta","Em Baixa","Favoritos","Todos"])
+        let sc = UISegmentedControl(items: ["Esta Semana","Este Mês","Todos"])
         sc.selectedSegmentTintColor = .BRQOrange()
         sc.backgroundColor = .black
         sc.setTitleTextAttributes([.foregroundColor: UIColor.white], for: .normal)
         sc.layer.cornerRadius = 10
         sc.layer.borderWidth = 1
         sc.layer.borderColor = UIColor.BRQGray2().cgColor
-        sc.selectedSegmentIndex = 3
+        sc.selectedSegmentIndex = 1
         
         return sc
     }()
     
-    lazy var viewInputs: UIView = {
-        let view = UIView()
-        view.backgroundColor = .BRQGray3()
+    lazy var viewInputs: ViewInputOutput = {
+        let view = ViewInputOutput(typeEntry: .Input)
         view.layer.cornerRadius = 10
         view.layer.borderWidth = 1
-        view.layer.borderColor = UIColor.BRQGray2().cgColor
+        view.layer.borderColor = UIColor.BRQBlue().cgColor
         return view
     }()
     
-    lazy var viewOutputs: UIView = {
-        let view = UIView()
-        view.backgroundColor = .BRQGray3()
+    lazy var viewOutputs: ViewInputOutput = {
+        let view = ViewInputOutput(typeEntry: .Output)
         view.layer.cornerRadius = 10
         view.layer.borderWidth = 1
-        view.layer.borderColor = UIColor.BRQGray2().cgColor
+        view.layer.borderColor = UIColor.BRQOrange().cgColor
         return view
     }()
     
@@ -53,10 +51,16 @@ class HomeView: UIView, ViewCodeProtocol {
         test()
         
         self.setupView()
+        setValue()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func setValue() {
+        self.viewInputs.setValue(value: 2450)
+        self.viewOutputs.setValue(value: 7689)
     }
     
     //MARK: - View Hierachy
