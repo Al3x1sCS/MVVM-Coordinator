@@ -20,17 +20,15 @@ class ButtonDefault: UIButton {
     }
     
     private func initDefault(title: String, color: UIColor) {
-        var config = UIButton.Configuration.filled()
-        config.baseBackgroundColor = color
-        config.cornerStyle = .capsule
-        self.configuration = config
-        self.setTitle(title, for: .normal)
-        
         let attributedText = NSMutableAttributedString(string: title, attributes: [
             NSAttributedString.Key.font: UIFont(name: "Arial", size: 24) as Any,
             NSAttributedString.Key.foregroundColor: UIColor.white,
             NSAttributedString.Key.kern: 1
         ])
+        
+        self.setTitle(title, for: .normal)
+        self.backgroundColor = color
+        self.layer.cornerRadius = 20
         
         self.setAttributedTitle(attributedText, for: .normal)
     }
@@ -66,10 +64,8 @@ class ButtonDefault: UIButton {
         switch state {
         case .disabled:
             disabledBackgroundColor = color
-            self.layer.cornerRadius = 20
         case .normal:
             defaultBackgroundColor = color
-            self.layer.cornerRadius = 20
         }
     }
     
