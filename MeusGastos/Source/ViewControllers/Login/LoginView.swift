@@ -168,13 +168,15 @@ class LoginView: UIView, ViewCodeProtocol {
         
         buttonLogin.setBackgroundColor(UIColor.BRQBlue().withAlphaComponent(0.5), for: .disabled)
         buttonRegister.setBackgroundColor(UIColor.BRQOrange().withAlphaComponent(0.5), for: .disabled)
+        buttonLogin.setBackgroundColor(UIColor.BRQBlue(), for: .normal)
+        buttonRegister.setBackgroundColor(UIColor.BRQOrange(), for: .normal)
         
-        //TODO: A responsabilidade da view é compor, não adicionar logica ao componente. Verificar se não faz parte da responsabilidade da viewmodel
+        //TODO: A responsabilidade da view é compor, não adicionar logica ao componente. Verificar se não faz parte da responsabilidade da controller ou viewmodel
         buttonRegister.addTarget(self, action: #selector(buttonRegisterTap), for: .touchUpInside)
         buttonLogin.addTarget(self, action: #selector(buttonLoginTap), for: .touchUpInside)
     }
     
-    //TODO: A responsabilidade da view é compor, não adicionar logica ao componente. Verificar se não faz parte da responsabilidade da viewmodel
+    //TODO: A responsabilidade da view é compor, não adicionar logica ao componente. Verificar se não faz parte da responsabilidade da controller ou viewmodel
     @objc func buttonRegisterTap() {
         self.onRegisterTap?()
     }
